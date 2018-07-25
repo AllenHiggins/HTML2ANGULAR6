@@ -1,1 +1,62 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "./animate.css";
+
+$headergrey: grey;
+$btngrey: rgb(107, 106, 106);
+$pgrey: rgb(168, 166, 166);
+$btnbordergrey: #e7e7e7;
+$green: green;
+$dark: #1f1815;
+
+.modal-content {
+  background-color: transparent !important;
+  border:none !important;
+  h1{
+    text-align: center;
+  }
+}
+
+.smallPrint{
+  color: #8d9092;
+  font-size: 12px;
+  text-align: right;
+}
+
+.code:hover{
+  color: green;
+  cursor: pointer;
+}
+
 /* You can add global styles to this file, and also import other style files */
+body{
+  margin:0px;
+  padding: 0px;
+}
+
+/* devices from small to labtop */
+@media only screen and (min-width: 0px) and (max-width: 991px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

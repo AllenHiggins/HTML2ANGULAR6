@@ -1,0 +1,13 @@
+div{
+  display: block;
+  clear: both;
+  width: 100vw;
+  background-color: #1f1815;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  app-links{
+    display: none;
+  }
+}

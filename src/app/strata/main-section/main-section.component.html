@@ -1,0 +1,35 @@
+<div style="float:right; padding-left:2em; padding-bottom: 2em;" class="col-lg-8">
+    <h2>{{info.header}}</h2>
+    <p>{{info.text}}</p>
+    <button
+      class="btn btn-outline-success">
+        {{btnTxt}}
+    </button>
+    <hr>
+    <h4>Recent Work</h4>
+    <div class="row">
+      <app-recent-work
+        class=" col-sm-6 col-md-6"
+        *ngFor="let data of tumbNail; let i = index;"
+          header="{{data.Header}}"
+          text="{{data.Text}}"
+          image="{{data.ImagePath}}"
+          (click)="open(content, i)"
+      ></app-recent-work>
+    </div>
+    <hr>
+    <h4>Get In Touch</h4>
+    <app-get-in-touch></app-get-in-touch>
+</div>
+<!-- Modal -->
+<ng-template
+  #content
+  let-c="close"
+  let-d="dismiss">
+  <div class="animated zoomIn faster">
+    <!--Photo Slider gose here-->
+    <app-ngbd-carousel-basic selectedIndex={{choice}}></app-ngbd-carousel-basic>
+  </div>
+</ng-template>
+<!-- End of Modal -->
+

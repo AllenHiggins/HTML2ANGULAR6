@@ -1,0 +1,28 @@
+<div class="container">
+  <ngb-carousel *ngIf="images">
+
+    <!-- Selected Image goes here -->
+      <ng-template ngbSlide>
+        <img
+          [src]="choosenImage.ImagePath"
+          alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>{{choosenImage.Header}}</h3>
+          <p>{{choosenImage.Text}}</p>
+        </div>
+      </ng-template>
+
+      <!-- Loop through rest of images here -->
+      <ng-template ngbSlide
+      *ngFor = "let image of images; let i = index;">
+        <img
+          [src]="image.ImagePath"
+          alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>{{image.Header}}</h3>
+          <p>{{image.Text}}</p>
+        </div>
+      </ng-template>
+
+  </ngb-carousel>
+</div>

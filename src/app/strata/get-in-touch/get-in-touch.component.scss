@@ -1,0 +1,78 @@
+p{
+  padding-top: 2em;
+  color:#a8a6a6;
+}
+
+div.formHolder{
+  padding-top: 1em;
+}
+
+div.userInput{
+  float: left;
+  padding-bottom: 1em;
+  padding-left: 0px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: #f7f7f7;
+  border-radius: 0.35em;
+  border: solid 2px transparent;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 7px 0.75em;
+  text-decoration: none;
+  width: 100%;
+}
+
+.btn-outline-success {
+  margin-top: 1em;
+  padding: 0.5em 2em 0.5em 2em;
+  color:rgb(107, 106, 106) !important;
+  background-color: transparent;
+  background-image: none;
+  border-color: #e7e7e7 !important;
+  border-width: 3px;
+}
+
+.btn-outline-success:hover {
+  color: green !important;
+  border-color: green !important;
+}
+
+ul{
+  text-decoration-style: none;
+  padding: 0px;
+  li:last-child{
+    padding-bottom: 0px;
+  }
+  li{
+    display: block;
+    padding: 0px 0px 10px 0px;
+    color: #a8a6a6;
+    h3{
+      font-size: 1.25em;
+      line-height: 1.5em;
+      //margin-right: 10px;
+    }
+    span{
+      display: inline-flex;
+    }
+  }
+}
+
+/* devices from small to labtop */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .btn {
+    width: 100% !important;
+    margin-bottom: 2em;
+  }
+
+}

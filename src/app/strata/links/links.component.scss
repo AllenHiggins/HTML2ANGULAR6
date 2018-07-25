@@ -1,0 +1,73 @@
+.logoBox{
+  float: right;
+  margin-top: 15vh;
+  ul{
+    li{
+      display: inline-block;
+      padding-left: 1em;
+      a{
+        font-size: 26px;
+        color:#8d9092;
+        display: inline;
+        text-decoration-line: none;
+      }
+      a:hover{
+        color: green;
+      }
+    }
+  }
+  p{
+    .line{
+      visibility: hidden;
+    }
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .logoBox{
+    padding-top: 3em;
+    padding-bottom: 4em;
+    float: unset;
+    width: 214px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    ul{
+      padding: 0px;
+      li:first-child{
+        padding-left: 0px;
+        margin-left: 0px;
+      }
+      li{
+        padding-left: 1em;
+        a{
+          font-size: 30px;
+        }
+      }
+    }
+    p{
+      display: inline;
+      .line{
+        visibility: visible;
+      }
+    }
+  }
+}
+
+/* devices from small to labtop */
+@media only screen and (max-width: 736px) {
+  .logoBox{
+    padding-top: 3em;
+    padding-bottom: 4em;
+    width: 214px;
+    ul{
+      li{
+        a{
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
