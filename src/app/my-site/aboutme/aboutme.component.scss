@@ -1,0 +1,27 @@
+#ABOUT{
+  padding-top: 9em;
+  padding-bottom: 9em;
+  .about-left{
+    h3{
+      padding-bottom: 1.5em;
+    }
+    p{
+      color:gray;
+    }
+  }
+
+  .about-right{
+    img{
+      max-width: 100%;
+    }
+  }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #ABOUT{
+    max-width: 80%;
+    margin: auto;
+  }
+}

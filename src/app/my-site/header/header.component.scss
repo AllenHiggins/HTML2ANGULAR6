@@ -1,0 +1,33 @@
+.bg-light {
+  background-color: #ffffff!important;
+  position: fixed;
+  box-shadow: 0px -7px 20px 0px grey;
+  height: 7em;
+  min-width: 100vw;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar-light .navbar-brand {
+  padding-left: 1em;
+  font-size: 2em;
+  font-family: 'Lobster', cursive;
+  text-shadow: -1px 3px 4px grey;
+  span{
+    font-size: 30px;
+    color: #5a5a5a;
+  }
+}
+
+.navbar-expand-lg .navbar-collapse {
+  // margin-left: 19em;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+  border: none;
+}
+.navbar-toggler {
+  border: none;
+}

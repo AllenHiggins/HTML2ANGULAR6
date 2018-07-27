@@ -1,0 +1,70 @@
+#parallax{
+  top: 7em;
+  background-image: url('../../assets/images/slider.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-position-y: 7em;
+  width: 100vw;
+  min-height: 100vh;
+  box-shadow: 0px 2px 8px grey;
+  background-blend-mode: overlay;
+  background-color: #d0d0d0;
+  .parallaxContent{
+    margin-top: 7em;
+    height: 100%;
+    h1{
+      text-align: center;
+      padding-top: 3em;
+      font-family: 'Lobster', cursive;
+      font-family: 'Cinzel', serif;
+    }
+
+    ul{
+      padding:0;
+      padding-top: 2em;
+      text-align: center;
+
+      li{
+        display: inline;
+        padding: 10px;
+        i{
+          font-size: 7em;
+          text-shadow: 1px 2px 1px gray;
+        }
+      }
+    }
+  }
+
+}
+
+/* devices small */
+@media only screen and (max-width: 768px) {
+  #parallax{
+    .parallaxContent{
+      h1{
+        font-size: 2em;
+      }
+      ul{
+        li{
+          i{
+            font-size: 6em;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #parallax{
+    .parallaxContent{
+      h1{
+        font-size: 23px;
+      }
+    }
+  }
+}

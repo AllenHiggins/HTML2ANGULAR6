@@ -7,9 +7,66 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+    crossorigin="anonymous">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  </head>
 <body>
   <app-root></app-root>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+      $(document).ready(function(){
+
+        window.sr = ScrollReveal();
+
+        sr.reveal('.about-left', {
+          duration: 2000,
+          origin:'bottom',
+        });
+
+        sr.reveal('.about-right', {
+          duration: 2000,
+          origin:'right',
+        });
+
+        sr.reveal('.demosite', {
+          duration: 2000,
+          origin:'top',
+        });
+
+        sr.reveal('.demoP', {
+          duration: 2000,
+          origin:'bottom',
+          delay:500,
+        });
+
+        sr.reveal('.democard', {
+          duration: 2000,
+          origin:'left',
+          delay:800,
+        });
+
+      });
+  </script>
+  <script>
+      $(function() {
+        // Smooth Scrolling
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+  </script>
 </body>
 </html>

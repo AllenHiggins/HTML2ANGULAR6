@@ -19,6 +19,14 @@ import { NgbdModalBasicComponent } from './strata/ngbd-modal-basic/ngbd-modal-ba
 import { NgbdCarouselBasicComponent } from './ngbd-carousel-basic/ngbd-carousel-basic.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselService } from './ngbd-carousel-basic/carousel.service';
+import { MySiteComponent } from './my-site/my-site.component';
+import { HeaderComponent } from './my-site/header/header.component';
+import { MainComponent } from './my-site/main/main.component';
+import { MyfooterComponent } from './my-site/myfooter/myfooter.component';
+import { ParrallaxComponent } from './parrallax/parrallax.component';
+import { AboutmeComponent } from './my-site/aboutme/aboutme.component';
+import { LatestworkComponent } from './my-site/latestwork/latestwork.component';
+import { CardsComponent } from './my-site/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +39,15 @@ import { CarouselService } from './ngbd-carousel-basic/carousel.service';
     GetInTouchComponent,
     StrataComponent,
     NgbdModalBasicComponent,
-    NgbdCarouselBasicComponent
+    NgbdCarouselBasicComponent,
+    MySiteComponent,
+    HeaderComponent,
+    MainComponent,
+    MyfooterComponent,
+    ParrallaxComponent,
+    AboutmeComponent,
+    LatestworkComponent,
+    CardsComponent
   ],
   imports: [
     HttpClientModule,
