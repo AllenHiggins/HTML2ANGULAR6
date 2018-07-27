@@ -27,6 +27,8 @@ import { ParrallaxComponent } from './parrallax/parrallax.component';
 import { AboutmeComponent } from './my-site/aboutme/aboutme.component';
 import { LatestworkComponent } from './my-site/latestwork/latestwork.component';
 import { CardsComponent } from './my-site/cards/cards.component';
+import { StackComponent } from './my-site/stack/stack.component';
+import { InterestComponent } from './my-site/interest/interest.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { CardsComponent } from './my-site/cards/cards.component';
     ParrallaxComponent,
     AboutmeComponent,
     LatestworkComponent,
-    CardsComponent
+    CardsComponent,
+    StackComponent,
+    InterestComponent
   ],
   imports: [
     HttpClientModule,

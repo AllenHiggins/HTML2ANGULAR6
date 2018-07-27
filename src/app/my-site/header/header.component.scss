@@ -15,6 +15,7 @@
   font-size: 2em;
   font-family: 'Lobster', cursive;
   text-shadow: -1px 3px 4px grey;
+  position: absolute;
   span{
     font-size: 30px;
     color: #5a5a5a;
@@ -22,11 +23,14 @@
 }
 
 .navbar-expand-lg .navbar-collapse {
-  // margin-left: 19em;
+  justify-content: center;
 }
 
 .navbar-toggler:not(:disabled):not(.disabled) {
   border: none;
+  position: absolute !important;
+  right: 2em;
+  float: right !important;
 }
 .navbar-toggler {
   border: none;
