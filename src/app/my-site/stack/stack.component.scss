@@ -1,26 +1,36 @@
 #STACK{
   padding-top: 9em;
   padding-bottom: 9em;
-  .about-left{
+  .aboutstack{
     h3{
       padding-bottom: 1.5em;
     }
     p{
       color:gray;
     }
-  }
 
-  .about-right{
+    ul{
+      padding-left: 1em;
+      list-style: inside;
+      li{
+        padding-bottom: 6px;
+        font-family: 'Lobster', cursive;
+        font-family: 'Cinzel', serif;
+        color: #727272;
+      }
+    }
+
+  }
+  .stack-right{
     img{
       max-width: 100%;
     }
   }
 }
 
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  #ABOUT{
+  #STACK{
     max-width: 80%;
     margin: auto;
   }
