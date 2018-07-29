@@ -1,37 +1,70 @@
 #STACK{
-  padding-top: 9em;
-  padding-bottom: 9em;
+  padding-top: 6em;
+  padding-bottom: 0em;
+  -webkit-background-clip: border-box;
+  width: 100vw;
+  height: 46em;
+  overflow: hidden;
   .aboutstack{
-    h3{
-      padding-bottom: 1.5em;
-    }
-    p{
-      color:gray;
-    }
-
-    ul{
-      padding-left: 1em;
-      list-style: inside;
-      li{
-        padding-bottom: 6px;
+    .aboutOne{
+      padding-top: 5em;
+      width: 70%;
+      display: block;
+      margin: auto;
+      h3{
         font-family: 'Lobster', cursive;
-        font-family: 'Cinzel', serif;
-        color: #727272;
+        text-shadow: -1px 1px 1px grey;
+      }
+      ul{
+        list-style: inside;
+        display: block;
+        margin: auto;
+        li{ text-align: center;
+          display: inline-block;
+          padding: 30px;
+          i{
+            font-size: 60px;
+            text-shadow: 1px 2px 1px grey;
+          }
+        }
       }
     }
-
   }
-  .stack-right{
-    img{
-      max-width: 100%;
-    }
+  video{
+    z-index: -1;
+    -ms-grid-row-align: auto;
+    opacity: .2;
+    margin-top: -60em;
+    margin-left: -31em;
   }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #STACK{
-    max-width: 80%;
-    margin: auto;
+    height: 64em;
+    .aboutstack{
+      .aboutOne{
+        width: 75%;
+      }
+    video{
+      margin-top: -61em;
+      margin-left: -47em;
+    }
   }
+}
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 404px) {
+    #STACK {
+      height: 64em;
+      .aboutstack{
+      video{
+        margin-top: -61em;
+        margin-left: -30em;
+      }
+    }
+  }
+
 }
