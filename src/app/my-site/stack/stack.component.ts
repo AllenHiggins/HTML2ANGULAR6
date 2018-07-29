@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Developer } from '../Models/Developer';
+import { DeveloperService } from '../developer.service';
 
 @Component({
   selector: 'app-stack',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stack.component.scss']
 })
 export class StackComponent implements OnInit {
-
-  constructor() { }
+  stack = [];
+  constructor(private developerService: DeveloperService) { }
 
   ngOnInit() {
+    this.stack = this.developerService.getDeveloperStack();
   }
 
 }

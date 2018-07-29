@@ -1,24 +1,10 @@
 <section id="STACK" class="container-fluid">
     <div class="aboutstack">
       <div class="aboutOne">
-        <h3><strong>STACK...</strong></h3>
+        <h3><strong>MY STACK...</strong></h3>
         <ul class="stacklist">
           <!--http://konpa.github.io/devicon/-->
-          <li><i class="devicon-angularjs-plain colored" ></i></li>
-          <li><i class="devicon-java-plain-wordmark colored"></i></li>
-          <li><i class="devicon-csharp-line-wordmark colored"></i></li>
-
-          <li><i class="devicon-css3-plain-wordmark colored"></i></li>
-          <li><i class="devicon-sass-original colored"></i></li>
-          <li><i class="devicon-html5-plain-wordmark colored"></i></li>
-
-          <li><i class="devicon-jquery-plain-wordmark colored"></i></li>
-          <li><i class="devicon-python-plain-wordmark colored"></i></li>
-          <li><i class="devicon-mysql-plain-wordmark colored"></i></li>
-
-          <li><i class="devicon-mongodb-plain-wordmark colored"></i></li>
-          <li><i class="devicon-ubuntu-plain-wordmark colored"></i></li>
-          <li><i class="devicon-windows8-original colored"></i></li>
+          <li *ngFor="let data of stack"><i class={{data}} ></i></li>
         </ul>
       </div>
     </div>

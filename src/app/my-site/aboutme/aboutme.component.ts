@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DeveloperService } from '../developer.service';
+import { Developer } from '../Models/Developer';
 
 @Component({
   selector: 'app-aboutme',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aboutme.component.scss']
 })
 export class AboutmeComponent implements OnInit {
-
-  constructor() { }
+  developer: Developer;
+  constructor(private developerService: DeveloperService) { }
 
   ngOnInit() {
+    this.developer = this.developerService.getDeveloperInfo();
   }
 
 }

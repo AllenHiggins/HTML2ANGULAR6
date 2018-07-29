@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DeveloperService } from '../developer.service';
+import { Developer } from '../Models/Developer';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  developer: Developer;
 
-  constructor() { }
+  constructor(private developerService: DeveloperService) { }
 
   ngOnInit() {
+    this.developer = this.developerService.getDeveloperInfo();
+    console.log(this.developer.LinkedIn + this.developer.GitHub);
   }
 
 }

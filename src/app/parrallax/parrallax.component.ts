@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DeveloperService } from '../my-site/developer.service';
+import { Developer } from '../my-site/Models/Developer';
 
 @Component({
   selector: 'app-parrallax',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parrallax.component.scss']
 })
 export class ParrallaxComponent implements OnInit {
-
-  constructor() { }
+  developer: Developer;
+  constructor(private developerService: DeveloperService) { }
 
   ngOnInit() {
+    this.developer = this.developerService.getDeveloperInfo();
   }
 
 }

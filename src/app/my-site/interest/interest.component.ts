@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DeveloperService } from '../developer.service';
+import { Developer } from '../Models/Developer';
 
 @Component({
   selector: 'app-interest',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./interest.component.scss']
 })
 export class InterestComponent implements OnInit {
+  developer: Developer;
 
-  constructor() { }
+  constructor(private developerService: DeveloperService) { }
 
   ngOnInit() {
+    this.developer = this.developerService.getDeveloperInfo();
   }
 
 }
