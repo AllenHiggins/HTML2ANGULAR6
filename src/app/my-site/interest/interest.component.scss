@@ -7,14 +7,31 @@
     }
     p{
       color:gray;
+      width: 100%;
     }
   }
 
-  .about-right{
-    img{
-      max-width: 100%;
+  .others{
+    width: 100%;
+    h3{
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
+
+    ul{
+      list-style: circle;
+      padding-left: 1em;
+      li{
+         color:gray;
+         padding-bottom: 1em;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+
   }
+
 }
 
 
