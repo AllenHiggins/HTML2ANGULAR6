@@ -3,11 +3,12 @@
     <div class="about-left">
       <h3><strong>INTERESTS</strong></h3>
       <p>{{developer.Interests}}</p>
+      <p>Here are some of my favourites...</p>
     </div>
   </div>
   <div class="col-xs-6 col-md-6">
       <div class="about-right">
-      <img src="../../../assets/images/about.jpg" class="about-right" />
+      <app-photoslider [images]=imagelist (click)="open(content)"></app-photoslider>
     </div>
   </div>
 </section>

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRouting } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InfoHeaderComponent } from './strata/info-header/info-header.component';
 import { MainSectionComponent } from './strata/main-section/main-section.component';
@@ -12,8 +13,6 @@ import { TumbnailService } from './strata/Services/tumbnail.service';
 import { GetInTouchComponent } from './strata/get-in-touch/get-in-touch.component';
 import { FormsModule } from '@angular/forms';
 import { StrataComponent } from './strata/strata.component';
-
-
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalBasicComponent } from './strata/ngbd-modal-basic/ngbd-modal-basic.component';
 import { NgbdCarouselBasicComponent } from './ngbd-carousel-basic/ngbd-carousel-basic.component';
@@ -29,6 +28,8 @@ import { LatestworkComponent } from './my-site/latestwork/latestwork.component';
 import { CardsComponent } from './my-site/cards/cards.component';
 import { StackComponent } from './my-site/stack/stack.component';
 import { InterestComponent } from './my-site/interest/interest.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { PhotosliderComponent } from './photoslider/photoslider.component';
 
 @NgModule({
   declarations: [
@@ -51,13 +52,16 @@ import { InterestComponent } from './my-site/interest/interest.component';
     LatestworkComponent,
     CardsComponent,
     StackComponent,
-    InterestComponent
+    InterestComponent,
+    NotfoundComponent,
+    PhotosliderComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     FormsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AppRouting
   ],
   providers: [MainContentService, TumbnailService, CarouselService],
   bootstrap: [AppComponent]

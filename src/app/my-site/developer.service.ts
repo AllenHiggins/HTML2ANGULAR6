@@ -33,7 +33,7 @@ export class DeveloperService {
       SQL, MongoDB, Data Analytics, Software Engineering and IOT. I am familiar with Windows\
       and Ubuntu Operating Systems and use Git source control in my projects.',
       this.stack,
-      'interests...',
+      'From time to time a like to take photographs, using Photoshop to create interesting digital images just for fun.',
       'Software Developer'
     );
   }

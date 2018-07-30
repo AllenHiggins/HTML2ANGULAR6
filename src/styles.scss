@@ -81,6 +81,11 @@ body{
   padding: 0px;
 }
 
+section.demopageplacement{
+  top:6em !important;
+  position: absolute !important;
+}
+
 /* devices from small to labtop */
 @media only screen and (min-width: 0px) and (max-width: 991px) {
 }
