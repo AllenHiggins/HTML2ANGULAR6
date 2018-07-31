@@ -1,4 +1,26 @@
+#navbar{
+  display: block;
+  margin: auto;
+  a{
+    color: black;
+    text-decoration: none;
+  }
 
+  a:hover{
+    color: gray;
+  }
+}
+
+
+#ham{
+  display: unset;
+  position: absolute;
+  right: 2em;
+}
+
+#ham:hover{
+  cursor: pointer;
+}
 
 .bg-light {
   background-color: #ffffff!important;
@@ -37,24 +59,28 @@
 
 }
 
-.navbar-expand-lg .navbar-collapse {
-  justify-content: center;
-  a{
-    text-decoration: none;
-    color: black;
-  }
 
-  a:hover{
-    color: rgb(63, 63, 63);
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #ham{
+    display: none;
   }
 }
 
-.navbar-toggler:not(:disabled):not(.disabled) {
-  border: none;
-  position: absolute !important;
-  right: 2em;
-  float: right !important;
-}
-.navbar-toggler {
-  border: none;
+/* Large devices lower than (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  #navbar{
+    width: 100vw;
+    display: none;
+    top: 7em;
+    position: absolute;
+    right: 0em;
+    background-color: #fdfdfd;
+    box-shadow: 1px 1px 2px grey;
+  }
+
+  #navbar.show{
+    display: unset;
+  }
+
 }

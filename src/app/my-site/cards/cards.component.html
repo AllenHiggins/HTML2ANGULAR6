@@ -1,8 +1,8 @@
-<div class="cardDemo">
+<div class="cardDemo" [ngClass]="{'notready': title === 'Oop\'s'}">
   <div class="coverImg">
-    <img src="../../../assets/images/cards/strataCover.png" />
+    <img src={{link}} />
   </div>
   <div class="backImg">
-    <h3>Strata</h3>
+    <h3>{{title}}</h3>
   </div>
 </div>

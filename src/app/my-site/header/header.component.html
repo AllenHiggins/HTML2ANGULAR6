@@ -15,40 +15,36 @@
         </li>
     </ul>
   </div>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
+    <div id="ham" (click)="open()" class="animated fadeIn">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbar" class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar navbar-nav navbar-right">
-        <li class="nav-item active">
-          <a class="nav-link" href="#HOME">
-              <a routerLink="">HOME</a><span class="sr-only">(current)</span>
+    </div>
+    <div
+      id="navbar"
+      class="animated fadeInDown"
+      [ngClass]="{'show': istrue === true}">
+      <ul class="navbar navbar-nav navbar-right" >
+        <li class="nav-item" >
+          <a class="nav-link"  href="#HOME" (click)="open()">
+              <a routerLink="">HOME</a>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#ABOUT">
+        <li class="nav-item" >
+          <a class="nav-link"  href="#ABOUT" (click)="open()">
               <a routerLink="">ABOUT</a>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#DEMO">
+          <a class="nav-link" href="#DEMO" (click)="open()">
               <a routerLink="">DEMO SITES</a>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#STACK">
+        <li class="nav-item" >
+          <a class="nav-link" href="#STACK" (click)="open()">
               <a routerLink="">STACK</a>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#INTEREST">
+        <li class="nav-item" >
+          <a class="nav-link" href="#INTEREST" (click)="open()">
               <a routerLink="">INTEREST</a>
           </a>
         </li>

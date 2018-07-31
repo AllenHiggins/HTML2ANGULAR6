@@ -86,6 +86,14 @@ section.demopageplacement{
   position: absolute !important;
 }
 
+.notready{
+  opacity: 0.5;
+}
+
+.notready:hover{
+  opacity: 1;
+}
+
 /* devices from small to labtop */
 @media only screen and (min-width: 0px) and (max-width: 991px) {
 }
