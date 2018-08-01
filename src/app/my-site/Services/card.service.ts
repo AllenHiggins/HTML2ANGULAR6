@@ -10,27 +10,27 @@ export class CardService {
   constructor() {
     this.cardList = [
       new Card(
-        '../../../assets/images/cards/strataCover.png',
+        'assets/images/cards/strataCover.png',
         'Strata',
       'demo/angular6/strata'),
       new Card(
-        '../../../assets/images/cards/workingonit.gif',
+        'assets/images/cards/workingonit.gif',
         'Oop\'s',
       '#'),
       new Card(
-        '../../../assets/images/cards/workingonit.gif',
+        'assets/images/cards/workingonit.gif',
         'Oop\'s',
       '#'),
       new Card(
-        '../../../assets/images/cards/workingonit.gif',
+        'assets/images/cards/workingonit.gif',
         'Oop\'s',
       '#'),
       new Card(
-        '../../../assets/images/cards/workingonit.gif',
+        'assets/images/cards/workingonit.gif',
         'Oop\'s',
       '#'),
       new Card(
-        '../../../assets/images/cards/workingonit.gif',
+        'assets/images/cards/workingonit.gif',
         'Oop\'s',
       '#'),
     ];

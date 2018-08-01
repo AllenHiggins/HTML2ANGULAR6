@@ -12,22 +12,22 @@ export class CarouselService {
     this.images = [
       new LargeImage( 'Image01',
                       'Some Samlpe text for Image01',
-                      '../../assets/images/largeImg/01.jpg'),
+                      'assets/images/largeImg/01.jpg'),
       new LargeImage( 'Image02',
                       'Some Samlpe text for Image02',
-                      '../../assets/images/largeImg/02.jpg'),
+                      'assets/images/largeImg/02.jpg'),
       new LargeImage( 'Image03',
                       'Some Samlpe text for Image03',
-                      '../../assets/images/largeImg/03.jpg'),
+                      'assets/images/largeImg/03.jpg'),
       new LargeImage( 'Image04',
                       'Some Samlpe text for Image04',
-                      '../../assets/images/largeImg/04.jpg'),
+                      'assets/images/largeImg/04.jpg'),
       new LargeImage( 'Image05',
                       'Some Samlpe text for Image05',
-                      '../../assets/images/largeImg/05.jpg'),
+                      'assets/images/largeImg/05.jpg'),
       new LargeImage( 'Image06',
                       'Some Samlpe text for Image06',
-                      '../../assets/images/largeImg/06.jpg')
+                      'assets/images/largeImg/06.jpg')
     ];
   }
 

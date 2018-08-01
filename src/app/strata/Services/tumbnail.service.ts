@@ -13,27 +13,27 @@ export class TumbnailService {
       new TumbNail(
         'Magna sed consequat tempus',
         'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-        '../../assets/images/tumbnails/01.jpg'),
+        'assets/images/tumbnails/01.jpg'),
       new TumbNail(
         'Ultricies lacinia interdum',
         'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-        '../../assets/images/tumbnails/02.jpg'),
+        'assets/images/tumbnails/02.jpg'),
       new TumbNail(
         'Tortor metus commodo',
         'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-        '../../assets/images/tumbnails/03.jpg'),
+        'assets/images/tumbnails/03.jpg'),
       new TumbNail(
         'Quam neque phasellus',
       'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-      '../../assets/images/tumbnails/04.jpg'),
+      'assets/images/tumbnails/04.jpg'),
       new TumbNail(
         'Nunc enim commodo aliquet',
         'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-        '../../assets/images/tumbnails/05.jpg'),
+        'assets/images/tumbnails/05.jpg'),
       new TumbNail(
         'Risus ornare lacinia',
         'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
-        '../../assets/images/tumbnails/06.jpg'),
+        'assets/images/tumbnails/06.jpg'),
     ];
   }
 
