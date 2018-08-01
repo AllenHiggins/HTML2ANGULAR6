@@ -15,12 +15,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.istrue = false;
     this.developer = this.developerService.getDeveloperInfo();
-    console.log(this.developer.LinkedIn + this.developer.GitHub);
   }
 
   open() {
     this.istrue = !this.istrue;
-    console.log(this.istrue);
     return this.istrue;
   }
 

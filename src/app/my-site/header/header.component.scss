@@ -9,6 +9,15 @@
   a:hover{
     color: gray;
   }
+
+  a:active{
+    color: grey;
+  }
+  a:focus{
+    color: gray;
+    border-bottom: 1px solid gray;
+  }
+
 }
 
 
