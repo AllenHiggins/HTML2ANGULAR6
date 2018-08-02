@@ -14,9 +14,9 @@ export class CardService {
         'Strata',
       'demo/angular6/strata'),
       new Card(
-        'assets/images/cards/workingonit.gif',
-        'Oop\'s',
-      '#'),
+        'assets/images/cards/clickmaster.png',
+        'Click Master',
+      'demo/angular6/clickmaster'),
       new Card(
         'assets/images/cards/workingonit.gif',
         'Oop\'s',

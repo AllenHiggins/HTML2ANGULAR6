@@ -30,6 +30,12 @@ import { StackComponent } from './my-site/stack/stack.component';
 import { InterestComponent } from './my-site/interest/interest.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { PhotosliderComponent } from './photoslider/photoslider.component';
+import { ClickmasterComponent } from './clickmaster/clickmaster.component';
+import { MainclickComponent } from './clickmaster/mainclick/mainclick.component';
+import { HeaderclickComponent } from './clickmaster/headerclick/headerclick.component';
+import { FooterclickComponent } from './clickmaster/footerclick/footerclick.component';
+import { PhotolistdisplayclickComponent } from './clickmaster/photolistdisplayclick/photolistdisplayclick.component';
+import { PhotosliderclickComponent } from './clickmaster/photosliderclick/photosliderclick.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +60,13 @@ import { PhotosliderComponent } from './photoslider/photoslider.component';
     StackComponent,
     InterestComponent,
     NotfoundComponent,
-    PhotosliderComponent
+    PhotosliderComponent,
+    ClickmasterComponent,
+    MainclickComponent,
+    HeaderclickComponent,
+    FooterclickComponent,
+    PhotolistdisplayclickComponent,
+    PhotosliderclickComponent
   ],
   imports: [
     HttpClientModule,
