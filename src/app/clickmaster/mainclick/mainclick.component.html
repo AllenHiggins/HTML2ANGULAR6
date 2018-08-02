@@ -1,8 +1,12 @@
-<section class="row">
-  <section class=" left-click-panel">
+<section class="row con">
+  <section
+    class=" left-click-panel"
+    [ngClass]="{'panel-out': close === true, 'panel-in': close === false}">
+    <div id="close" (click)="closePanel()">X</div>
     <app-photosliderclick></app-photosliderclick>
   </section>
   <section class=" right-click-panel">
+
     <app-headerclick></app-headerclick>
     <app-photolistdisplayclick></app-photolistdisplayclick>
     <app-footerclick></app-footerclick>

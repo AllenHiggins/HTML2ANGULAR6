@@ -1,17 +1,66 @@
+#close{
+  position: relative;
+  top: 1em;
+  color: white;
+  float: right;
+  right: 1em;
+  font-size: 43px;
+  font-family: 'Poiret One', cursive;
+}
+
+#close:hover{
+  cursor: pointer;
+}
+
+.con{
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  display: -webkit-inline-box;
+  overflow: hidden;
+}
 
 .right-click-panel{
   background-color: green;
-  min-width: 30vw;
-
+  min-width: 20em;
+  position: relative;
 }
 
 .left-click-panel{
   background-color: rebeccapurple;
-   min-width: 70vw;
+   min-width: 77vw;
    height: 100vh;
+   overflow: hidden;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+
+.panel-in{
+  animation-name: pIn;
+  animation-duration: .500s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: ease;
+}
+
+.panel-out{
+  animation-name: pOut;
+  animation-duration: .500s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: ease;
+}
+
+@keyframes pOut {
+  from {min-width: 77vw;}
+  to {min-width:100vw;}
+}
+
+@keyframes pIn {
+  from {min-width: 100vw;}
+  to {min-width:77vw;}
+}
+
+
 @media only screen and (max-width: 992px) {
   .right-click-panel{
     position: absolute;
@@ -24,7 +73,7 @@
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
+
 @media only screen and (max-width: 600px) {
   .right-click-panel{
     min-width: 100vw;

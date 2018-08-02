@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mainclick.component.scss']
 })
 export class MainclickComponent implements OnInit {
-
+  close: boolean;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  closePanel() {
+    this.close = !this.close;
   }
 
 }
