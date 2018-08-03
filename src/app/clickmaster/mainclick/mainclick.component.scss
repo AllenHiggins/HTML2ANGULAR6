@@ -1,6 +1,21 @@
+
+.icon-to-open{
+  background-image: url("../../../assets/images/bars.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-to-close{
+  background-image: url("../../../assets/images/close.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+
 #close{
   position: relative;
-  top: 1em;
+  top: 10px;
   color: white;
   float: right;
   right: 1em;
@@ -8,41 +23,45 @@
   font-family: 'Poiret One', cursive;
 }
 
+#close2{
+  background-image: url("../../../assets/images/close.png");
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+#close2:hover,
 #close:hover{
   cursor: pointer;
 }
 
+
+
 .con{
   width: 100vw;
   height: 100vh;
-  display: inline-block;
-  display: -webkit-inline-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
   overflow: hidden;
 }
 
 .right-click-panel{
-  background-color: green;
-  min-width: 20em;
-  position: relative;
+    background-color: green;
+    width: 30%;
 }
 
 .left-click-panel{
   background-color: rebeccapurple;
-   min-width: 77vw;
-   height: 100vh;
-   overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }
 
-
-.panel-in{
-  animation-name: pIn;
-  animation-duration: .500s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-direction: ease;
-}
-
-.panel-out{
+.panel-full{
   animation-name: pOut;
   animation-duration: .500s;
   animation-timing-function: linear;
@@ -50,34 +69,95 @@
   animation-direction: ease;
 }
 
+.panel-back{
+  animation-name: pInP;
+  animation-duration: .500s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: ease;
+}
+
 @keyframes pOut {
-  from {min-width: 77vw;}
-  to {min-width:100vw;}
+  from {width: 70%;}
+  to {width:100%;}
 }
 
-@keyframes pIn {
-  from {min-width: 100vw;}
-  to {min-width:77vw;}
-}
 
+@keyframes pInP {
+  from {width: 100%;}
+  to {width:70%;}
+}
 
 @media only screen and (max-width: 992px) {
+  .icon-to-close{
+    background-image: url("../../../assets/images/bars.png");
+  }
+
+  #close2{
+    visibility: visible;
+  }
   .right-click-panel{
     position: absolute;
-    right:-15px;
-    height: 100vh;
+    right: 0px;
     background-color: brown;
+    box-shadow: -1px 0px 8px black;
+    height: 100vh;
   }
   .left-click-panel{
-     min-width: 100vw;
+     min-width: 100%;
   }
+
+  .panel-out{
+    animation-name: slideOut;
+    animation-duration: .500s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: ease;
+  }
+
+  @keyframes slideOut {
+    from { right: 0px;}
+    to {right: -30%;}
+  }
+
+
+  .panel-in{
+    animation-name: slideIn;
+    animation-duration: .500s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: ease;
+  }
+
+  @keyframes slideIn {
+    from { right: -30%;}
+    to {right: 0px;}
+  }
+
+
 }
 
-
 @media only screen and (max-width: 600px) {
+
   .right-click-panel{
     min-width: 100vw;
     height: 100vh;
     background-color: brown;
+  }
+
+  @keyframes slideOut {
+    from { right: 0px;}
+    to {right: -100%;}
+  }
+
+  @keyframes slideIn {
+    from { right: -100%;}
+    to {right: 0px;}
+  }
+
+  #close{
+    div{
+      content: '--';
+    }
   }
 }

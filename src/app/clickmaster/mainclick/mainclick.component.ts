@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainclickComponent implements OnInit {
   close: boolean;
+  close2: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.close = false;
+    this.close = false;
   }
 
-  closePanel() {
-    this.close = !this.close;
+  closePanel(tab: string) {
+    if ( tab === 'close') {
+      this.close = !this.close;
+      this.close2 = false;
+    } else {
+      this.close2 = true;
+    }
   }
 
 }
