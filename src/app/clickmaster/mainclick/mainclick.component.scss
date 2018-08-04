@@ -1,35 +1,40 @@
 
 .icon-to-open{
-  background-image: url("../../../assets/images/bars.png");
-  background-size: cover;
   width: 40px;
   height: 40px;
+  position: absolute;
+  z-index: 2;
+  right: 43px;
+  top: 20px;
+  font-size: 24px;
 }
 
 .icon-to-close{
-  background-image: url("../../../assets/images/close.png");
-  background-size: cover;
   width: 35px;
   height: 35px;
+  position: absolute;
+  z-index: 2;
+  right: 43px;
+  top: 20px;
+  font-size: 24px;
 }
 
 #close{
-  position: relative;
-  top: 10px;
   color: white;
   float: right;
   right: 1em;
   font-size: 43px;
   font-family: 'Poiret One', cursive;
+  z-index: 1;
 }
 
 #close2{
-  background-image: url("../../../assets/images/close.png");
-  background-size: cover;
+  color: black;
+  position: absolute;
   width: 20px;
   height: 20px;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 14px;
   visibility: hidden;
 }
 
@@ -37,12 +42,36 @@
 #close:hover{
   cursor: pointer;
 }
+#left,#right{
+  color: white;
+  font-size: 54px;
+  position: absolute;
+  height: 60px;
+  width: 75px;
+  top: 40vh;
+}
+#left{
+  text-align: center;
+  left: 10px;
+  font-size: 24px;
+}
+#right{
+  text-align: center;
+  right: 25px;
+  font-size: 24px;
+}
 
-
-
+#controls{
+  width: 100%;
+  height: 100vh;
+  left:0;
+  opacity: .4;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+}
 .con{
   width: 100vw;
-  // height: 100vh;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-box;
@@ -50,97 +79,115 @@
   overflow: hidden;
 }
 
-.right-click-panel{
-    background-color: #3A3C47;
-    width: 30%;
+.left-click-panel{
+  background-color: #3A3C47;
+  position: fixed;
+  height: 100vh;
+  width: 80%;
+  margin-top: -10px;
+  img{
+    margin-top: -90px;
+    width: 100vw;
+    height: 125vh;
+  }
 }
 
-.left-click-panel{
-  background-color: rebeccapurple;
-  width: 100%;
-  // height: 100vh;
+.right-click-panel{
+    background-color: #3A3C47;
+    width: 21%;
+    position: absolute;
+    right: 12px;
+    overflow-y: scroll;
+    box-shadow: -1px 0px 9px grey
+}
+/*************************************************/
+/**************** left panel *********************/
+/*************************************************/
+.panel-notfull{
+  animation-name: notfill;
+  animation-duration: .300s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: ease;
 }
 
 .panel-full{
-  animation-name: pOut;
-  animation-duration: .500s;
+  animation-name: fill;
+  animation-duration: .300s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: ease;
+}
+
+@keyframes fill {
+  from {
+    width: 80%;
+    margin-top: -10px;
+  }
+  to {
+    width:100%;
+    margin-top: 0px;
+  }
+}
+
+@keyframes notfill {
+  from {
+     width:100%;
+     margin-top: 0px;
+
+   }
+   to {
+     width: 80%;
+     margin-top: -10px;
+   }
+
+ }
+/***********************************************/
+/***************Rigth panel*********************/
+/***********************************************/
+.panel-out{
+  animation-name: slideOut;
+  animation-duration: .300s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-direction: ease;
 }
 
 .panel-back{
-  animation-name: pInP;
-  animation-duration: .500s;
+  animation-name: slideIn;
+  animation-duration: .300s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-direction: ease;
 }
 
-@keyframes pOut {
-  from {width: 70%;}
-  to {width:100%;}
+@keyframes slideIn {
+ from {right:-20%;} to {right: 11px;}
+
 }
-
-
-@keyframes pInP {
-  from {width: 100%;}
-  to {width:70%;}
+@keyframes slideOut {
+  from {right: 11px;}
+  to {right:-20%;}
 }
-
+/**********************************************/
+/************* Media Queries ******************/
+/**********************************************/
 @media only screen and (max-width: 992px) {
-  .icon-to-close{
-    background-image: url("../../../assets/images/bars.png");
-  }
 
-  #close2{
-    visibility: visible;
-  }
-  .right-click-panel{
-    position: absolute;
-    right: 0px;
-    box-shadow: -1px 0px 8px black;
-    // height: 100vh;
-  }
   .left-click-panel{
-     min-width: 100%;
+     width: 100vw;
+     height: 100vh;
   }
-
-  .panel-out{
-    animation-name: slideOut;
-    animation-duration: .500s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-direction: ease;
-  }
-
-  @keyframes slideOut {
-    from { right: 0px;}
-    to {right: -30%;}
-  }
-
-
-  .panel-in{
-    animation-name: slideIn;
-    animation-duration: .500s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-direction: ease;
-  }
-
-  @keyframes slideIn {
-    from { right: -30%;}
-    to {right: 0px;}
-  }
-
-
 }
 
 @media only screen and (max-width: 600px) {
 
+  #close2{
+    visibility: visible;
+  }
+
   .right-click-panel{
     min-width: 100vw;
-    // height: 100vh;
   }
 
   @keyframes slideOut {
@@ -151,5 +198,16 @@
   @keyframes slideIn {
     from {opacity: 0; z-index: -1;}
     to {opacity: 1; z-index: 1;}
+  }
+
+  .left-click-panel{
+    img{
+      width: 150vw;
+      margin-left: -104px;
+    }
+
+    #controls{
+      left:-10;
+    }
   }
 }

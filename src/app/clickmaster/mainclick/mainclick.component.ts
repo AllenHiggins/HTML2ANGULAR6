@@ -19,6 +19,7 @@ export class MainclickComponent implements OnInit {
     if ( tab === 'close') {
       this.close = !this.close;
       this.close2 = false;
+      console.log(this.close);
     } else {
       this.close2 = true;
     }
