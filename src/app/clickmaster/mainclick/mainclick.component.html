@@ -1,32 +1,42 @@
 <section class="con">
-  <section
-    class="left-click-panel"
-    [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}"
+  <div
+  style=" background-color: green;"
+  class="left-click-panel"
+  [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}"
   >
-    <div id="close">
-      <img src="assets/images/click/fulls/06.jpg" >
-      <div id="controls">
-        <div (click)="closePanel('close')">
-          <div class="icon-to-close" *ngIf="!close"><i class="fa fa-times"></i></div>
-          <div class="icon-to-open" *ngIf="close"><i class="fa fa-bars"></i></div>
+    <ngb-carousel id="clickslider" style="width: 100vw"
+      [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}"
+    >
+      <!-- Loop through rest of images here -->
+      <ng-template ngbSlide *ngFor="let image of images" >
+        <img [src]=image alt="Random first slide"
+
+
+        [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
+
+
+      </ng-template>
+    </ngb-carousel>
+
+    <div id="close"  >
+      <div id="controls" [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
+        <div (click)="closePanel()">
+          <div class="icon-to-close" *ngIf="close"><i class="fa fa-times"></i></div>
+          <div class="icon-to-open" *ngIf="!close"><i class="fa fa-bars"></i></div>
         </div>
-
-
-          <div id="left"><i class="fa fa-chevron-left"></i></div>
-        <div id="right"><i class="fa fa-chevron-right"></i></div>
       </div>
     </div>
-</section>
+  </div>
 
 
 
 <section
-    class="right-click-panel"
-    [ngClass]="{'panel-out': close === false, 'panel-back': close === true}"
-  >
+  class="right-click-panel"
+  [ngClass]="{'panel-out': close === false, 'panel-back': close === true }"
+>
     <div
       id="close2"
-      (click)="closePanel('close2')"><i class="fa fa-times"></i></div>
+      (click)="closePanel()"><i class="fa fa-times"></i></div>
     <app-headerclick></app-headerclick>
     <app-photolistdisplayclick></app-photolistdisplayclick>
     <app-footerclick></app-footerclick>

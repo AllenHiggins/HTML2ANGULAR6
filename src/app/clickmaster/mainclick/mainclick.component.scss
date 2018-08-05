@@ -42,24 +42,6 @@
 #close:hover{
   cursor: pointer;
 }
-#left,#right{
-  color: white;
-  font-size: 54px;
-  position: absolute;
-  height: 60px;
-  width: 75px;
-  top: 40vh;
-}
-#left{
-  text-align: center;
-  left: 10px;
-  font-size: 24px;
-}
-#right{
-  text-align: center;
-  right: 25px;
-  font-size: 24px;
-}
 
 #controls{
   width: 100%;
@@ -98,7 +80,7 @@
     position: absolute;
     right: 12px;
     overflow-y: scroll;
-    box-shadow: -1px 0px 9px grey
+    // box-shadow: -1px 0px 9px grey
 }
 /*************************************************/
 /**************** left panel *********************/
@@ -121,23 +103,23 @@
 
 @keyframes fill {
   from {
-    width: 80%;
+    width: 80vw;
     margin-top: -10px;
   }
   to {
-    width:100%;
+    width:100vw;
     margin-top: 0px;
   }
 }
 
 @keyframes notfill {
   from {
-     width:100%;
+     width:100vw;
      margin-top: 0px;
 
    }
    to {
-     width: 80%;
+     width: 80vw;
      margin-top: -10px;
    }
 
@@ -174,17 +156,21 @@
 /**********************************************/
 @media only screen and (max-width: 992px) {
 
+  #close2{
+    visibility: visible;
+  }
+
   .left-click-panel{
      width: 100vw;
      height: 100vh;
   }
+
+  @keyframes fill { }
+
+  @keyframes notfill {}
 }
 
 @media only screen and (max-width: 600px) {
-
-  #close2{
-    visibility: visible;
-  }
 
   .right-click-panel{
     min-width: 100vw;

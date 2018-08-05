@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PhotolistService } from '../photolist.service';
 
 @Component({
   selector: 'app-mainclick',
@@ -6,23 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mainclick.component.scss']
 })
 export class MainclickComponent implements OnInit {
+  images: string[] = [];
   close: boolean;
-  close2: boolean;
-  constructor() { }
+  constructor( private photolistService: PhotolistService) { }
 
   ngOnInit() {
     this.close = false;
     this.close = false;
+    this.images = this.photolistService.getFullList();
   }
 
   closePanel(tab: string) {
-    if ( tab === 'close') {
-      this.close = !this.close;
-      this.close2 = false;
-      console.log(this.close);
-    } else {
-      this.close2 = true;
-    }
+    this.close = !this.close;
   }
 
 }
