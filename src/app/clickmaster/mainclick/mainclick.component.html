@@ -1,33 +1,18 @@
 <section class="con">
   <div class="left-click-panel">
-    <ngb-carousel
+    <div
       id="clickslider"
       style="width: 100vw"
       [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
-
-
-
- <!-- user select image goes here -->
-      <ng-template ngbSlide>
         <img
         [src]=images[index]
         [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
-      </ng-template>
-
-
- <!-- other images go here
-      <ng-template ngbSlide *ngFor="let image of images" >
-        <img
-        [src]=image
-        alt="Random first slide"
-        [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
-      </ng-template>-->
-    </ngb-carousel>
+    </div>
     <div id="close">
       <div
         id="controls"
         [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
-        <div (click)="closePanel()">
+        <div (click)="closePanel()" class="closeIcons">
           <div class="icon-to-close" *ngIf="close"><i class="fa fa-times"></i></div>
           <div class="icon-to-open" *ngIf="!close"><i class="fa fa-bars"></i></div>
         </div>
@@ -35,26 +20,18 @@
     </div>
   </div>
 
-  <section
+  <div
     class="right-click-panel"
     [ngClass]="{'panel-out': close === false, 'panel-back': close === true}">
     <div
       id="close2"
+      class="closeIcons"
       (click)="closePanel()"><i class="fa fa-times"></i></div>
     <app-headerclick></app-headerclick>
-    <section class="clickPhotoList">
-    <app-photolistdisplayclick></app-photolistdisplayclick>
-    <!--  <ul>
-        <li
-         tabindex="1"
-         *ngFor="let thumb of thumbs; let i = index"
-         (click)="imgChoice(i)"
-         >
-          <img src={{thumb}} (click)="closePanel()"/>
-        </li>
-      </ul>
-     </section> -->
+    <div class="clickPhotoList">
+      <app-photolistdisplayclick></app-photolistdisplayclick>
+    </div>
     <app-footerclick></app-footerclick>
-  </section>
+  </div>
 
 </section>

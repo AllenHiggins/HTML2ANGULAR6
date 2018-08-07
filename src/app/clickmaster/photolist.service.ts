@@ -6,12 +6,12 @@ import { Subject } from 'rxjs';
 })
 export class PhotolistService {
   thumbsList: string[] = [
+    'assets/images/click/thumbs/06.jpg',
     'assets/images/click/thumbs/01.jpg',
     'assets/images/click/thumbs/02.jpg',
     'assets/images/click/thumbs/03.jpg',
     'assets/images/click/thumbs/04.jpg',
     'assets/images/click/thumbs/05.jpg',
-    'assets/images/click/thumbs/06.jpg',
     'assets/images/click/thumbs/07.jpg',
     'assets/images/click/thumbs/08.jpg',
     'assets/images/click/thumbs/09.jpg',
@@ -36,7 +36,6 @@ export class PhotolistService {
   ];
 
   public selectedImage = new Subject<number>();
-  public thumbIsPressed = new Subject();
 
   constructor() { }
 

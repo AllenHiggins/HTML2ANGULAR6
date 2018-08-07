@@ -10,18 +10,15 @@ export class MainclickComponent implements OnInit, OnDestroy {
   images: string[] = [];
   thumbs = [];
   close: boolean;
-  isMobile = false;
   index = 0;
   constructor( private photolistService: PhotolistService) { }
 
   ngOnInit() {
-    this.close = false;
+    this.close = true;
     this.thumbs = this.photolistService.getThumbsList();
     this.images = this.photolistService.getFullList();
     this.photolistService.selectedImage.subscribe(index => {
       this.index = index;
-    });
-    this.photolistService.thumbIsPressed.subscribe(() => {
       this.closePanel();
     });
   }
@@ -34,9 +31,23 @@ export class MainclickComponent implements OnInit, OnDestroy {
     this.photolistService.selectedImage.next(index);
   }
 
+  // TODO
+  changeImgWithArrows(direction: string) {
+    // I konw the index -> this.index holds current value
+
+    // Get lenght of the list
+
+    // Check if moving right or left -> direction:string
+
+    // If left is index 0, if so set index to lenght -> wrap around
+
+    // If right is index at lenght, if so set index to 0 --> wrap around
+
+    // Otherwise index+1 if going right and index-1 if going left
+  }
+
   ngOnDestroy() {
     this.photolistService.selectedImage.unsubscribe();
-    this.photolistService.thumbIsPressed.unsubscribe();
   }
 
 }

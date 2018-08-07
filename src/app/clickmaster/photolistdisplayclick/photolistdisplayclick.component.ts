@@ -18,13 +18,8 @@ export class PhotolistdisplayclickComponent implements OnInit, OnDestroy {
     this.photolistService.selectedImage.next(index);
   }
 
-  thumbSelected() {
-    this.photolistService.thumbIsPressed.next();
-  }
-
   ngOnDestroy() {
     this.photolistService.selectedImage.unsubscribe();
-    this.photolistService.thumbIsPressed.unsubscribe();
   }
 
 }
