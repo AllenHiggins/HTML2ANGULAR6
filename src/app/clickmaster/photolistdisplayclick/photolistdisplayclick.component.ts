@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PhotolistService } from '../photolist.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { PhotolistService } from '../photolist.service';
   templateUrl: './photolistdisplayclick.component.html',
   styleUrls: ['./photolistdisplayclick.component.scss']
 })
-export class PhotolistdisplayclickComponent implements OnInit {
+export class PhotolistdisplayclickComponent implements OnInit, OnDestroy {
   thumbs = [];
   constructor(private photolistService: PhotolistService) { }
 
@@ -15,7 +15,16 @@ export class PhotolistdisplayclickComponent implements OnInit {
   }
 
   imgChoice(index: number) {
-    console.log(this.thumbs[index]);
+    this.photolistService.selectedImage.next(index);
+  }
+
+  thumbSelected() {
+    this.photolistService.thumbIsPressed.next();
+  }
+
+  ngOnDestroy() {
+    this.photolistService.selectedImage.unsubscribe();
+    this.photolistService.thumbIsPressed.unsubscribe();
   }
 
 }

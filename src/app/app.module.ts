@@ -35,7 +35,6 @@ import { MainclickComponent } from './clickmaster/mainclick/mainclick.component'
 import { HeaderclickComponent } from './clickmaster/headerclick/headerclick.component';
 import { FooterclickComponent } from './clickmaster/footerclick/footerclick.component';
 import { PhotolistdisplayclickComponent } from './clickmaster/photolistdisplayclick/photolistdisplayclick.component';
-import { PhotosliderclickComponent } from './clickmaster/photosliderclick/photosliderclick.component';
 
 @NgModule({
   declarations: [
@@ -65,8 +64,7 @@ import { PhotosliderclickComponent } from './clickmaster/photosliderclick/photos
     MainclickComponent,
     HeaderclickComponent,
     FooterclickComponent,
-    PhotolistdisplayclickComponent,
-    PhotosliderclickComponent
+    PhotolistdisplayclickComponent
   ],
   imports: [
     HttpClientModule,

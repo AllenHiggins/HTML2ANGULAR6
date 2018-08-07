@@ -5,7 +5,7 @@
     *ngFor="let thumb of thumbs; let i = index"
     (click)="imgChoice(i)"
     >
-     <img src={{thumb}} />
+     <img src={{thumb}} (click)="thumbSelected()"/>
    </li>
  </ul>
 </section>

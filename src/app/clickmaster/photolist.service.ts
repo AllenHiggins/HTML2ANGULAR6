@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +21,12 @@ export class PhotolistService {
   ];
 
   fullList: string[] = [
+    'assets/images/click/fulls/06.jpg',
     'assets/images/click/fulls/01.jpg',
     'assets/images/click/fulls/02.jpg',
     'assets/images/click/fulls/03.jpg',
     'assets/images/click/fulls/04.jpg',
     'assets/images/click/fulls/05.jpg',
-    'assets/images/click/fulls/06.jpg',
     'assets/images/click/fulls/07.jpg',
     'assets/images/click/fulls/08.jpg',
     'assets/images/click/fulls/09.jpg',
@@ -33,6 +34,9 @@ export class PhotolistService {
     'assets/images/click/fulls/11.jpg',
     'assets/images/click/fulls/12.jpg'
   ];
+
+  public selectedImage = new Subject<number>();
+  public thumbIsPressed = new Subject();
 
   constructor() { }
 

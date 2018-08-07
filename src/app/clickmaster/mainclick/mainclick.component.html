@@ -1,25 +1,32 @@
 <section class="con">
-  <div
-  style=" background-color: green;"
-  class="left-click-panel"
-  [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}"
-  >
-    <ngb-carousel id="clickslider" style="width: 100vw"
-      [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}"
-    >
-      <!-- Loop through rest of images here -->
-      <ng-template ngbSlide *ngFor="let image of images" >
-        <img [src]=image alt="Random first slide"
+  <div class="left-click-panel">
+    <ngb-carousel
+      id="clickslider"
+      style="width: 100vw"
+      [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
 
 
+
+ <!-- user select image goes here -->
+      <ng-template ngbSlide>
+        <img
+        [src]=images[index]
         [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
-
-
       </ng-template>
-    </ngb-carousel>
 
-    <div id="close"  >
-      <div id="controls" [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
+
+ <!-- other images go here
+      <ng-template ngbSlide *ngFor="let image of images" >
+        <img
+        [src]=image
+        alt="Random first slide"
+        [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
+      </ng-template>-->
+    </ngb-carousel>
+    <div id="close">
+      <div
+        id="controls"
+        [ngClass]="{'panel-notfull': close === true,'panel-full': close === false}">
         <div (click)="closePanel()">
           <div class="icon-to-close" *ngIf="close"><i class="fa fa-times"></i></div>
           <div class="icon-to-open" *ngIf="!close"><i class="fa fa-bars"></i></div>
@@ -28,19 +35,26 @@
     </div>
   </div>
 
-
-
-<section
-  class="right-click-panel"
-  [ngClass]="{'panel-out': close === false, 'panel-back': close === true }"
->
+  <section
+    class="right-click-panel"
+    [ngClass]="{'panel-out': close === false, 'panel-back': close === true}">
     <div
       id="close2"
       (click)="closePanel()"><i class="fa fa-times"></i></div>
     <app-headerclick></app-headerclick>
+    <section class="clickPhotoList">
     <app-photolistdisplayclick></app-photolistdisplayclick>
+    <!--  <ul>
+        <li
+         tabindex="1"
+         *ngFor="let thumb of thumbs; let i = index"
+         (click)="imgChoice(i)"
+         >
+          <img src={{thumb}} (click)="closePanel()"/>
+        </li>
+      </ul>
+     </section> -->
     <app-footerclick></app-footerclick>
   </section>
-
 
 </section>
