@@ -1,3 +1,19 @@
+#clickArrows{
+  display: inline-flex;
+  margin-top: 40vh;
+  text-align: center;
+  font-size: 1.5em;
+  li{
+    width: 50px;
+    text-shadow: 0px 0px 3px black;
+  }
+ #right{
+    position: absolute;
+    z-index: 2;
+    right: 43px;
+  }
+}
+
 
 .icon-to-open{
   width: 40px;
@@ -69,7 +85,7 @@
   img{
     margin-top: -90px;
     width: 100vw;
-    height: 125vh;
+    height: 100vh;
   }
 }
 
@@ -115,7 +131,6 @@
   from {
      width:100vw;
      margin-top: 0px;
-
    }
    to {
      width: 80vw;

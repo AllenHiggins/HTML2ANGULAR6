@@ -31,19 +31,21 @@ export class MainclickComponent implements OnInit, OnDestroy {
     this.photolistService.selectedImage.next(index);
   }
 
-  // TODO
   changeImgWithArrows(direction: string) {
-    // I konw the index -> this.index holds current value
-
-    // Get lenght of the list
-
-    // Check if moving right or left -> direction:string
-
-    // If left is index 0, if so set index to lenght -> wrap around
-
-    // If right is index at lenght, if so set index to 0 --> wrap around
-
-    // Otherwise index+1 if going right and index-1 if going left
+    const end = this.images.length - 1;
+    if ( direction === 'right') {
+      if ( this.index + 1 > end ) {
+        this.index = 0;
+      } else {
+        this.index++;
+      }
+    } else {
+      if ( this.index - 1 < 0 ) {
+        this.index = end;
+      } else {
+        this.index--;
+      }
+    }
   }
 
   ngOnDestroy() {

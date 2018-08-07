@@ -16,10 +16,13 @@
           <div class="icon-to-close" *ngIf="close"><i class="fa fa-times"></i></div>
           <div class="icon-to-open" *ngIf="!close"><i class="fa fa-bars"></i></div>
         </div>
+        <ul id="clickArrows">
+          <li id="left" (click)="changeImgWithArrows('left')" class="closeIcons"><</li>
+          <li id="right" (click)="changeImgWithArrows('right')" class="closeIcons">></li>
+        </ul>
       </div>
     </div>
   </div>
-
   <div
     class="right-click-panel"
     [ngClass]="{'panel-out': close === false, 'panel-back': close === true}">
@@ -33,5 +36,4 @@
     </div>
     <app-footerclick></app-footerclick>
   </div>
-
 </section>
