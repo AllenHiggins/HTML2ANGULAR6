@@ -18,9 +18,9 @@ export class CardService {
         'Click Master',
       'demo/angular6/clickmaster'),
       new Card(
-        'assets/images/cards/workingonit.gif',
-        'Oop\'s',
-      '#'),
+        'assets/images/cards/aerial.png',
+        'Aerial',
+      'demo/angular6/aerial'),
       new Card(
         'assets/images/cards/workingonit.gif',
         'Oop\'s',

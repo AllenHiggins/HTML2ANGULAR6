@@ -1,0 +1,58 @@
+#aerial{
+  background-color: #348cb2;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+#bg{
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-image: url('../../assets/images/aerial/bgCover.jpg');
+  background-size: 1475px auto;
+  height: 487px;
+  width: 100%;
+  background-repeat: round;
+  animation: moveBG 36s linear infinite;
+}
+
+@keyframes moveBG {
+  from {background-position: 0 0;}
+  to {background-position: -100vw 0;}
+}
+
+#innerbg{
+  background-image: url('../../assets/images/aerial/overlay.svg');
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  top: 0;
+  left: 0px;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  #bg{
+    background-size: 424px auto;
+    height: 139px;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  #bg{
+    background-size: 1148px auto;
+    height: 380px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #bg{
+    // background-size: 2274px auto;
+    // height: 758px;
+  }
+}
