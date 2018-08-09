@@ -3,6 +3,18 @@
   height: 100vh;
   width: 100vw;
   position: absolute;
+  #pageFooter{
+    color: white;
+    opacity: 0.75;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
 
 #bg{
@@ -10,11 +22,11 @@
   left: 0;
   position: fixed;
   background-image: url('../../assets/images/aerial/bgCover.jpg');
-  background-size: 1475px auto;
-  height: 487px;
+  background-size: 1175px auto;
+  height: 359px;
   width: 100%;
   background-repeat: round;
-  animation: moveBG 36s linear infinite;
+  animation: moveBG 59s linear infinite;
 }
 
 @keyframes moveBG {
@@ -31,28 +43,122 @@
   left: 0px;
 }
 
+#displayContent{
+  position: fixed;
+  top: 7em;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  h1{
+    margin-top:  100px;
+    font-size: 65px;
+    font-family: 'Comfortaa', cursive;
+  }
+  P{
+    opacity: 0.75;
+  }
+  ul{
+    // display: inline-block;
+    // width: 100%;
+    li{
+      display: inline-block;
+      // margin-left: 104px;
+      width: 100px;
+      .roundContanier{
+        // position: absolute;
+        border: 1px solid white;
+        width: 70px;
+        height: 70px;
+        border-radius: 180px;
+        font-size: 27px;
+        padding: 13px;
+        margin: auto;
+        position: absolute;
+      }
+      .roundContanier:hover{
+        background-color: #ffffff45;
+       // opacity: 0.35;
+        cursor: pointer;
+        animation-name: grow;
+        animation-duration: .200s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-direction: ease;
+      }
+
+      @keyframes grow {
+      from {
+        width: 70px;
+        height: 70px;
+        font-size: 27px;
+        margin-left: 0px;
+        margin-top: 0px;
+      }
+      to {
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+        margin-left: -5px;
+        margin-top: -5px;
+      }
+
+      }
+      .roundContainerIcon{
+        margin-top: -40px;
+        margin-left: 18px;
+        width: 20px;
+        display: block;
+        font-size: 22px;
+      }
+    }
+  }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   #bg{
-    background-size: 424px auto;
+    background-size:323px auto;
     height: 139px;
   }
+
+
+  #displayContent{
+    h1{
+      margin-top: 73px;
+      font-size: 34px;
+    }
+    P{
+      font-size: 12px;
+    }
+    ul{
+      width: 66%;
+      margin: auto;
+      margin-top: -63px;
+      li{
+        width: 88px;
+        margin-top: 79px;
+      }
+
+    }
+  }
+
+
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
   #bg{
-    background-size: 1148px auto;
-    height: 380px;
+    background-size: 676px auto;
+    height: 319px;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width:1672px) {
   #bg{
-    // background-size: 2274px auto;
-    // height: 758px;
+    background-size: 1572px auto;
+    height: 725px
   }
 }

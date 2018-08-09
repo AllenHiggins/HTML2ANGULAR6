@@ -1,4 +1,14 @@
 <div id="aerial" >
   <div id="bg"></div>
   <div id="innerbg"></div>
+  <div id="displayContent">
+    <h1>{{title}}</h1>
+    <p>{{subTitle}}</p>
+    <ul>
+      <li *ngFor="let image of links">
+        <div class="roundContanier"><i class="{{image}}"></i></div>
+      </li>
+    </ul>
+  </div>
+  <p id="pageFooter">&copy; Untitled.Design:<a href="https://html5up.net/">HTML5UP</a>.</p>
 </div>
