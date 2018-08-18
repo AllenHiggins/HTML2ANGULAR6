@@ -16,6 +16,14 @@
               [title]=data.title></app-cards>
           </a>
         </li>
+        <li *ngFor = "let site of websites"
+          class="col-md-4 col-xs-12 democard">
+          <a href={{site.route}}>
+            <app-cards
+              [link]=site.imgPath
+              [title]=site.title></app-cards>
+          </a>
+        </li>
       </ul>
     </div>
   </div>

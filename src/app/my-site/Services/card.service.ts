@@ -7,6 +7,8 @@ import { Card } from '../Models/Card.Model';
 export class CardService {
 
   cardList: Card[];
+  newSiteList: Card[];
+
   constructor() {
     this.cardList = [
       new Card(
@@ -24,19 +26,22 @@ export class CardService {
       new Card(
         'assets/images/cards/workingonit.gif',
         'Oop\'s',
-      '#'),
+      '#')
+    ];
+
+    this.newSiteList = [
       new Card(
-        'assets/images/cards/workingonit.gif',
-        'Oop\'s',
-      '#'),
-      new Card(
-        'assets/images/cards/workingonit.gif',
-        'Oop\'s',
-      '#'),
+        'assets/images/cards/coffeemaster.png',
+        'Coffee Master',
+        'https://allenhiggins.github.io/coffeemasterSite/')
     ];
    }
 
    getCardList() {
      return this.cardList.slice();
+   }
+
+   getNewSiteList() {
+     return this.newSiteList.slice();
    }
 }

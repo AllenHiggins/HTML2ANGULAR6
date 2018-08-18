@@ -9,13 +9,13 @@ import { Card } from '../Models/Card.Model';
 })
 export class LatestworkComponent implements OnInit {
   cardList: Card[];
+  websites: Card[];
 
   constructor(private cardService: CardService) { }
 
   ngOnInit() {
-
     this.cardList = this.cardService.getCardList();
-
+    this.websites = this.cardService.getNewSiteList();
   }
 
 }
