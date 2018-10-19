@@ -11,17 +11,15 @@ export class DeveloperService {
   constructor() {
     this.stack = [
       'devicon-angularjs-plain colored',
-          'devicon-java-plain-wordmark colored',
-          'devicon-csharp-line-wordmark colored',
-          'devicon-css3-plain-wordmark colored',
-          'devicon-sass-original colored',
-          'devicon-html5-plain-wordmark colored',
-          'devicon-jquery-plain-wordmark colored',
-          'devicon-python-plain-wordmark colored',
-          'devicon-mysql-plain-wordmark colored',
-          'devicon-mongodb-plain-wordmark colored',
-          'devicon-ubuntu-plain-wordmark colored',
-          'devicon-windows8-original colored'
+      'devicon-react-original-wordmark colored',
+      'devicon-css3-plain-wordmark colored',
+      'devicon-html5-plain-wordmark colored',
+      'devicon-jquery-plain-wordmark colored',
+      'devicon-java-plain-wordmark colored',
+      'devicon-python-plain-wordmark colored',
+      'devicon-mysql-plain-wordmark colored',
+      'devicon-ubuntu-plain-wordmark colored',
+      'devicon-windows8-original colored'
     ];
     this.derveloper = new Developer(
       'Allen Higgins',

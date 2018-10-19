@@ -14,26 +14,37 @@ export class CardService {
       new Card(
         'assets/images/cards/strataCover.png',
         'Strata',
-      'demo/angular6/strata'),
+        'demo/angular6/strata',
+        'fab fa-angular animated fadeIn'),
       new Card(
         'assets/images/cards/clickmaster.png',
         'Click Master',
-      'demo/angular6/clickmaster'),
+      'demo/angular6/clickmaster',
+      'fab fa-angular animated fadeIn'),
       new Card(
         'assets/images/cards/aerial.png',
         'Aerial',
-      'demo/angular6/aerial'),
+      'demo/angular6/aerial',
+      'fab fa-angular animated fadeIn'),
       new Card(
         'assets/images/cards/workingonit.gif',
         'Oop\'s',
-      '#')
+      '#',
+      '')
     ];
 
     this.newSiteList = [
       new Card(
+        'assets/images/cards/listapp.png',
+        'List App',
+        'https://allenhiggins.github.io/listapp/',
+        'fab fa-react animated fadeIn'
+      ),
+      new Card(
         'assets/images/cards/coffeemaster.png',
         'Coffee Master',
-        'https://allenhiggins.github.io/coffeemasterSite/')
+        'https://allenhiggins.github.io/coffeemasterSite/',
+        'fab fa-angular animated fadeIn')
     ];
    }
 
